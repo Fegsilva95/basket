@@ -6,47 +6,94 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/pointsPlusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="212dp"
+        android:onClick="clickIncDec"
+        android:text="+1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/pointsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="212dp"
         android:text="Points"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/throwMinusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="clickIncDec"
+        android:text="-1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pointsMinusButton" />
+
+    <Button
+        android:id="@+id/blockPlusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:onClick="clickIncDec"
+        android:text="+1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/throwPlusButton" />
 
     <TextView
         android:id="@+id/throwTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Throws"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pointsValue" />
 
-    <TextView
-        android:id="@+id/blockTextView"
+    <Button
+        android:id="@+id/pointsMinusButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Blockages"
-        android:textSize="24sp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="clickIncDec"
+        android:text="-1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/throwsValue" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/blockMinusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="clickIncDec"
+        android:text="-1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/throwMinusButton" />
 
     <TextView
         android:id="@+id/pointsValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:text="0"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/pointsMinusButton"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toEndOf="@+id/pointsPlusButton"
         app:layout_constraintTop_toBottomOf="@+id/pointsTextView" />
 
@@ -54,83 +101,135 @@
         android:id="@+id/throwsValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="0"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/throwMinusButton"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toEndOf="@+id/throwPlusButton"
         app:layout_constraintTop_toBottomOf="@+id/throwTextView" />
+
+    <TextView
+        android:id="@+id/blockTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Blockages"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/throwsValue" />
 
     <TextView
         android:id="@+id/blockValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="0"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/blockMinusButton"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toEndOf="@+id/blockPlusButton"
         app:layout_constraintTop_toBottomOf="@+id/blockTextView" />
-
-    <Button
-        android:id="@+id/pointsPlusButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:onClick="clickIncDec"
-        android:text="+1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/throwPlusButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:onClick="clickIncDec"
         android:text="+1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pointsPlusButton" />
 
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="What's your name?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/namePlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
     <Button
-        android:id="@+id/blockPlusButton"
+        android:id="@+id/nameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="62dp"
-        android:text="+1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/throwPlusButton" />
-
-    <Button
-        android:id="@+id/pointsMinusButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:onClick="clickIncDec"
-        android:text="-1"
+        android:onClick="saveName"
+        android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/namePlainText"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/throwMinusButton"
+        android:id="@+id/resetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="32dp"
-        android:text="-1"
+        android:layout_marginTop="16dp"
+        android:onClick="resetValues"
+        android:text="Reset"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pointsMinusButton" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blockValue" />
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="travelled distance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namePlainText" />
+
+    <EditText
+        android:id="@+id/distancePlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="km"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distanceTextView" />
 
     <Button
-        android:id="@+id/blockMinusButton"
+        android:id="@+id/distanceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="32dp"
-        android:text="-1"
+        android:onClick="saveDistance"
+        android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/throwMinusButton" />
+        app:layout_constraintStart_toEndOf="@+id/distancePlainText"
+        app:layout_constraintTop_toBottomOf="@+id/nameButton" />
+
+    <TextView
+        android:id="@+id/playerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
